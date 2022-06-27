@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title></title>
+</head>
+<body>
+<h1>welcome to user insights page</h1>
+
+<div>
+<ul>
+{% for post in page1 %}
+    <li>
+        <p>User Id {{ post.User_id }}</p>
+        <p>Followers Count {{ post.Followers_count }}</p>
+        <p>Follows Count {{ post.Follows_count }}</p>
+        <p>Media Count {{ post.Media_count }}</p>
+
+    </li>
+{% endfor  %}
+</ul>
+</div>
+
+
+</body>
+</html>

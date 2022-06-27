@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model Form</title>
+</head>
+<body>
+{{A}}
+        <h2> Check if the employee leaves</h2>
+        <h2> Enter Details</h2>
+        <br>
+    {% block content %}
+    <form action="{% url 'HRlogmodel' %}" method="post">
+        {% csrf_token %}
+            satisfaction:<input name="satisfaction_level" type="text"><br><br>
+            evaluation:<input name="last_evaluation" type="text"><br><br>
+            project:<input name="number_project" type="text" ><br><br>
+            montly_hours:<input name="average_montly_hours" type="text"><br><br>
+            time_spend:<input name="time_spend_company" type="text"><br><br>
+            accident: <input name="Work_accident" type="text" ><br><br>
+            promotion: <input name="promotion_last_5years" type="text" ><br><br>
+            Depart: <input name="Departments " type="text" ><br><br>
+            sal: <input name="salary" type="text" ><br><br>
+
+            <input type="submit" value="predict">
+    </form><br>
+
+    {% endblock %}
+</body>
+</html>
